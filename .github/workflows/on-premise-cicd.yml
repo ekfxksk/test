@@ -6,6 +6,12 @@ on:
         description: 'Set Tags Name'
         required: true
         default: master
+
+permissions:
+  contents: read # 저장소 내용을 읽기 위한 권한 (fetch, checkout 등에 필요)
+    # 만약 이 워크플로에서 커밋 푸시, 릴리즈 생성 등 쓰기 작업도 한다면:
+    # contents: write # 쓰기 권한은 읽기 권한을 포함합니다
+
 jobs:
   build:
     runs-on: ubuntu-latest
