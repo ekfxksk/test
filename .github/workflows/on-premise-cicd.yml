@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      release: ${{ step.set-version.VERSION_NAME }}
+      release: ${{ steps.set-version.outputs.VERSION_NAME }}
     steps:
       - id: set-version
         run:
