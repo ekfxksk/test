@@ -8,9 +8,8 @@ on:
         default: master
 
 permissions:
-  contents: read # 저장소 내용을 읽기 위한 권한 (fetch, checkout 등에 필요)
-    # 만약 이 워크플로에서 커밋 푸시, 릴리즈 생성 등 쓰기 작업도 한다면:
-    # contents: write # 쓰기 권한은 읽기 권한을 포함합니다
+  contents: read # 이 줄이 반드시 있어야 합니다.
+  actions: write # actions: write는 워크플로 실행을 제어하는 데 사용됩니다.
 
 jobs:
   build:
